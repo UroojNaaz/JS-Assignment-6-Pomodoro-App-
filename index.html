@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favIcon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="custom-container">
+        <div id="focusAndBreak">
+            <button id="focusTimeShow" class="activeBtn">Focus</button>
+            <button id="breakTimeShow">Break</button>
+        </div>
+        <div class="timer">
+            <span id="minutes">25</span><span>:</span><span id="seconds">00</span>
+        </div>
+        <div class="timerControls">
+            <span><i class="fa-solid fa-play" id="startAndStopBtn"></i></span>
+            <span><i class="fa-solid fa-rotate-right" id="resetTime"></i></span>
+            <span><i class="fa-solid fa-gear" id="timeSetting" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"></i></span>
+        </div>
+    </div>
+
+
+    <!-------------------------------------- Bootstrap -------------------------------------->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark" id="settingBox">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Change Timing</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-around">
+                    <div class="d-flex flex-column align-items-center" id="focus-break-col">
+                        <h4 class="text-white">Focus</h4>
+                        <div class="d-flex"><span class="btnIncAndDec" id="focusTimeInc"><i
+                                    class="fa-solid fa-plus"></i></span><input type="tel" id="focusTimeInput"
+                                disabled><span class="btnIncAndDec" id="focusTimeDec"><i
+                                    class="fa-solid fa-minus"></i></span></div>
+                        <div style="width:80px">
+                            <h6>minutes</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column align-items-center" id="focus-break-col">
+                        <h4 class="text-white">Break</h4>
+                        <div class="d-flex"><span class="btnIncAndDec" id="breakTimeInc"><i
+                                    class="fa-solid fa-plus"></i></span><input type="tel" id="breakTimeInput"
+                                disabled><span class="btnIncAndDec" id="breakTimeDec"><i
+                                    class="fa-solid fa-minus"></i></span></div>
+                        <div style="width:80px">
+                            <h6>minutes</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div style="flex: 1;"><button type="button" class="btn btn-outline-danger" id="resetTimeChnge">Reset
+                            Changes</button></div>
+                    <button type="button" class="btn btn-secondary" id="closeBtn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="saveTimeChnge" data-bs-dismiss="modal">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

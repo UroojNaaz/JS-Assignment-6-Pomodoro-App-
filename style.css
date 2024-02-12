@@ -1,0 +1,233 @@
+body {
+  margin: 0px;
+  min-height: 100vh;
+  max-height: fit-content;
+  max-width: 100%;
+  min-width: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: url("./images/bg.jpg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.custom-container {
+  padding-bottom: 30px;
+  max-height: 450px;
+  min-height: 450px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: #ad9b7748 !important;
+  box-sizing: border-box;
+  box-shadow: rgb(26, 27, 29) 0px 2px 50px 16px;
+}
+
+.custom-container>h1 {
+  font-family: sans-serif;
+  font-weight: 900;
+  color: #FCF6F5;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+/* focus and break buttons */
+#focusAndBreak {
+  padding: 50px 0px 30px 0px;
+}
+
+#focusAndBreak button {
+  background-color: transparent;
+  color: #ffffff;
+  height: 50px;
+  width: 120px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0px 15px;
+  border: none;
+  border-radius: 30px;
+  border: 3px solid #b58a70;
+  cursor: pointer;
+}
+
+#focusAndBreak button:hover {
+  background: #b58a70;
+  border: 3px solid #b58a70 !important;
+  color: #ffffff;
+}
+
+.activeBtn {
+  background-color: #b58a70 !important;
+  color: #ffffff !important;
+}
+
+/* Timer (numbers) */
+.timer {
+  color:#f7f7f7;
+  font-size: 130px;
+  font-weight: bold;
+  font-family: sans-serif;
+  height: 150px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timer>span:nth-child(1) {
+  min-width: 200px;
+  max-width: fit-content;
+  text-align: end;
+}
+
+.timer>span:nth-child(3) {
+  min-width: 200px;
+  max-width: fit-content;
+  text-align: start;
+}
+
+.timer>span:nth-child(2) {
+  font-family: serif;
+  padding: 0px 13px 30px 13px;
+}
+
+
+/* Timer controls */
+.timerControls>span {
+  display: inline-block;
+  text-align: center;
+  width: 90px;
+  margin-top: 35px;
+}
+
+.timerControls i {
+  cursor: pointer;
+  font-size: 35px;
+  color: #b58a70;
+}
+
+/* SETTINGS (bootstrap) */
+#settingBox{
+ background-color: #483f29!important;
+}
+#focusTimeInput {
+  background-color: #b58a70;
+  height: 45px;
+  width: 80px;
+  border-radius: 5px;
+  padding: 0px 8px;
+  font-size: large;
+  font-weight: 500;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+#breakTimeInput {
+  background-color: #b58a70;
+  height: 45px;
+  width: 80px;
+  border-radius: 5px;
+  padding: 0px 8px;
+  font-size: large;
+  font-weight: 500;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+#focus-break-col {
+  width: fit-content;
+}
+
+#focus-break-col h6 {
+  color: rgb(255, 255, 255);
+}
+
+.btnIncAndDec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #b58a70;
+  padding-top: 2px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#saveTimeChnge {
+  background-color: #b58a70 !important;
+  color: white;
+  border-color: #b58a70 !important;
+}
+
+#closeBtn{
+  background-color:#b58a70 !important;
+    color: #ffffff !important;
+}
+
+#closeBtn:hover{
+  background-color:transparent !important;
+  border-color:#b58a70  !important;
+  color: #b58a70!important;
+}
+#resetTimeChnge{
+  color: #b58a70;
+  border-color: #b58a70;
+}
+
+#resetTimeChnge:hover{
+  color: white;
+  background-color: #b58a70;
+  border-color: #b58a70;
+}
+.textColrChng {
+  color: #fbfbfb !important;
+}
+
+.swal2-show {
+  background-color: #000000 !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.swal2-confirm {
+  background-color: rgb(0, 0, 0) !important;
+  color: white !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+@media only screen and (max-width: 650px) {
+  .custom-container {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 400px;
+    max-height: 400px;
+  }
+
+  .timer {
+    height: 100px;
+    font-size: 90px;
+  }
+
+  .timer>span:nth-child(2) {
+    font-family: serif;
+    padding: 0px 10px 30px 10px;
+  }
+
+  .timer>span:nth-child(1) {
+    min-width: 130px;
+    max-width: fit-content;
+  }
+
+  .timer>span:nth-child(3) {
+    min-width: 130px;
+    max-width: fit-content;
+  }
+}
